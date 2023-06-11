@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Sign In</title>
+  <style>
+    html {
+      height: 100%;
+      background: url("w2.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1 {
+      text-align: center;
+      color: #555;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 3px;
+      box-sizing: border-box;
+      background-color: #f9f9f9;
+      color: #555;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #30302f;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #080808;
+    }
+
+    .message {
+      margin-top: 20px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sign In</h1>
+    <form id="signin-form">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Sign In</button>
+    </form>
+    <p class="message">Don't have an account? <a href="#">Sign up</a></p>
+  </div>
+
+  <script>
+    document.getElementById('signin-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      // Perform sign-in logic here, e.g., send data to a server or perform client-side validation
+      console.log('Email:', email);
+      console.log('Password:', password);
+      // You can redirect the user to another page after successful sign-in using:
+      // window.location.href = "https://your-website.com/dashboard";
+    });
+  </script>
+</body>
+
+</html>
